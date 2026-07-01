@@ -1,3 +1,34 @@
+MicroPython XiaoMiao Port with MicroPython Micro GUI
+==
+***包含AI生成代码***
+
+lv_micropython最近版本在esp32上有问题，所以添加了MicroPython Micro GUI库。
+
+`import xiaomiao` 封装了除i2c外的大部分扩展。
+
+BUILD
+-
+esp-idf v5.5.4编译通过。
+```
+. PATH/TO/esp-idf/export.sh
+git checkout xiaomiao
+make -C mpy-cross
+make -C ports/esp32 board=ESP32_XIAOMIAO
+```
+
+鸣谢
+-
+https://github.com/pysn2012/xueersi-xiaomiao
+https://github.com/peterhinch/micropython-micro-gui
+
+
+
+
+
+
+
+
+
 [![Unix CI badge](https://github.com/micropython/micropython/actions/workflows/ports_unix.yml/badge.svg)](https://github.com/micropython/micropython/actions?query=branch%3Amaster+event%3Apush) [![STM32 CI badge](https://github.com/micropython/micropython/actions/workflows/ports_stm32.yml/badge.svg)](https://github.com/micropython/micropython/actions?query=branch%3Amaster+event%3Apush) [![Docs CI badge](https://github.com/micropython/micropython/actions/workflows/docs.yml/badge.svg)](https://docs.micropython.org/) [![codecov](https://codecov.io/gh/micropython/micropython/branch/master/graph/badge.svg?token=I92PfD05sD)](https://codecov.io/gh/micropython/micropython)
 
 The MicroPython project
