@@ -9,6 +9,7 @@ lv_micropython最近版本在esp32上有问题，所以添加了MicroPython Micr
 右上角红绿LED和motor1 & 2是i2c控制的，地址是0x40:
 
 红色LED寄存器地址0xA0，0:熄灭，非0:点亮
+
 绿色LED寄存器地址0xA1，0:熄灭，非0:点亮
 ```
 from machine import I2C, Pin
@@ -17,7 +18,21 @@ i2c= I2C(0, scl=Pin(I2C_SCL), sda=Pin(I2C_SDA))
 i2c.writeto_mem(0x40, 0xA0, bytes([1])) # turn on red LED
 i2c.writeto_mem(0x40, 0xA1, bytes([1])) # turn on green LED
 ```
+电机控制有点奇怪，还需要更多测试。
 
+```
+|B0   |B1 |B2 |B3 |B4 |
+|addr |on     |off    |
+
+addr= 0x06+idx*4
+
+idx:
+  M1A= 2
+  M1B= 3
+  M2A= 1
+  M2B= 0
+```
+  
 BUILD
 -
 esp-idf v5.5.4编译通过。
