@@ -1,0 +1,7 @@
+list(APPEND SDKCONFIG_DEFAULTS
+    boards/ESP32_XIAOMIAO/sdkconfig.ota
+)
+
+list(APPEND MICROPY_DEF_BOARD
+    MICROPY_HW_BOARD_NAME="Xueersi XiaoMiao (ESP32-WROVER-B) with OTA"
+)

@@ -1,0 +1,24 @@
+{
+    "deploy": [
+        "../deploy.md"
+    ],
+    "docs": "",
+    "features": [
+        "BLE",
+        "WiFi",
+        "Dual-core",
+        "External Flash",
+        "External RAM",
+        "Display",
+        "SDCard",
+        "Buzzer",
+        "I2C",
+        "ADC"
+    ],
+    "images": [],
+    "mcu": "esp32",
+    "product": "Xueersi XiaoMiao / ESP32-WROVER-B",
+    "thumbnail": "",
+    "url": "https://github.com/goddade/",
+    "vendor": "Xueersi"
+}
