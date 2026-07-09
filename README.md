@@ -18,7 +18,7 @@ i2c= I2C(0, scl=Pin(I2C_SCL), sda=Pin(I2C_SDA))
 i2c.writeto_mem(0x40, 0xA0, bytes([1])) # turn on red LED
 i2c.writeto_mem(0x40, 0xA1, bytes([1])) # turn on green LED
 ```
-电机控制有点奇怪，还需要更多测试。
+电机驱动供电接的usb，需要外接电源。
 
 ```
 |B0   |B1 |B2 |B3 |B4 |
